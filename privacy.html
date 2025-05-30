@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>DeepLookup – Privacy Policy</title>
+
+<!-- 100 % self-contained stylesheet -->
+<style>
+  :root{
+    --bg:      #f6f8fb;
+    --card:    #ffffff;
+    --text:    #262b33;
+    --muted:   #6b7684;
+    --accent1: #007aff;
+    --accent2: #ff3b30;
+    --radius:  14px;
+    font-size: 16px;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  body{
+    margin:0; background:var(--bg); color:var(--text); line-height:1.55;
+    display:flex; align-items:flex-start; justify-content:center; padding:48px 12px;
+  }
+  .card{
+    max-width:800px; width:100%; background:var(--card); border-radius:var(--radius);
+    box-shadow:0 5px 16px rgba(0,0,0,0.08); padding:48px 56px;
+  }
+  h1{margin-top:0; font-size:2rem; background:linear-gradient(90deg,var(--accent1),var(--accent2));
+     -webkit-background-clip:text; color:transparent;}
+  h2{margin:2.25rem 0 0.75rem; font-size:1.35rem}
+  p{margin:0.85rem 0}
+  ul{margin:0.5rem 0 1.2rem 1.2rem; padding-left:0.5rem}
+  small{color:var(--muted)}
+  a{color:var(--accent1); text-decoration:none}
+  a:hover{text-decoration:underline}
+  @media(max-width:560px){ .card{padding:32px 28px} }
+</style>
+</head>
+<body>
+
+<article class="card">
+  <h1>Privacy Policy</h1>
+  <p><strong>Last updated:</strong> 30 May 2025</p>
+
+  <h2>1. Who we are</h2>
+  <p><em>DeepLookup</em> is a Chrome extension that lets you highlight text on any webpage
+     and ask context-aware questions. We take your privacy seriously and
+     collect only the minimal data required to provide the service.</p>
+
+  <h2>2. Data we collect & why</h2>
+  <ul>
+    <li><strong>Selected text</strong> – the text you highlight and actively submit.
+        Needed to generate an answer for you.</li>
+    <li><strong>Your question</strong> – supplied in the popup. Needed for the same reason.</li>
+    <li><strong>Basic usage metrics</strong> (timestamp, request size, response time) – 
+        used internally to monitor performance, detect abuse and improve reliability.</li>
+  </ul>
+
+  <h2>3. What we <em>don’t</em> collect</h2>
+  <ul>
+    <li>No browsing history</li>
+    <li>No cookies or trackers</li>
+    <li>No personal identifiers (name, email, IP is stored only in transient server logs & rotated within 7 days)</li>
+  </ul>
+
+  <h2>4. How processing works</h2>
+  <p>When you click <em>Ask DeepLookup</em> we send your selected text and question
+     over HTTPS to our secure proxy (<code>*.vercel.app</code>).  
+     The proxy forwards it to <a href="https://deepseek.com" target="_blank">DeepSeek LLM</a>
+     to generate an answer, then returns the result to your browser.
+     All traffic is encrypted end-to-end.</p>
+
+  <h2>5. Data retention</h2>
+  <ul>
+    <li><strong>Selected text &amp; questions</strong> – stored in volatile memory only long enough to process
+        the request (≤ 30 seconds).</li>
+    <li><strong>Minimal logs</strong> – kept for 7 days for abuse detection, then automatically purged.</li>
+  </ul>
+
+  <h2>6. Third-party services</h2>
+  <p>We rely on:</p>
+  <ul>
+    <li><strong>Vercel</strong> – serverless hosting for the proxy</li>
+    <li><strong>DeepSeek AI API</strong> – language model that generates the answer</li>
+  </ul>
+  <p>Both providers comply with industry-standard security practices and GDPR.</p>
+
+  <h2>7. Your choices</h2>
+  <ul>
+    <li>Do not click the ask-button if you don’t want the selected text sent.</li>
+    <li>Uninstall the extension at any time via <em>chrome://extensions</em>.</li>
+    <li>For data enquiries, contact us (see below).</li>
+  </ul>
+
+  <h2>8. Security</h2>
+  <p>All server communications are protected by TLS 1.2+. Access to backend
+     logs and environment variables is limited to authorised personnel.</p>
+
+  <h2>9. Changes</h2>
+  <p>We may update this policy to reflect changes in regulations or features.
+     We’ll bump the “Last updated” date and highlight major changes inside the
+     extension’s release notes.</p>
+
+  <h2>10. Contact</h2>
+  <p>Email <a href="mailto:support@deeplookup.ai">support@deeplookup.ai</a>
+     with any privacy questions or concerns.</p>
+
+  <p><small>&copy; 2025 DeepLookup Labs – All rights reserved.</small></p>
+</article>
+
+</body>
+</html>
